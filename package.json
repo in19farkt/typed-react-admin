@@ -23,5 +23,10 @@
   "homepage": "https://github.com/in19farkt/typed-react-admin#readme",
   "devDependencies": {
     "dtslint": "^0.2.0"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.40",
+    "material-ui": "^1.0.0-beta.32",
+    "redux": "^3.7.2"
   }
 }
