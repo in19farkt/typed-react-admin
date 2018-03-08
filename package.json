@@ -1,0 +1,27 @@
+{
+  "name": "@types/react-admin",
+  "version": "0.0.1",
+  "description": "TypeScript's type definitions for react-admin 2.0.0-beta3",
+  "main": "index.js",
+  "scripts": {
+    "lint": "dtslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/in19farkt/typed-react-admin.git"
+  },
+  "keywords": [
+    "react-admin",
+    "typescript",
+    "typescript-declaration"
+  ],
+  "author": "Dmitriy Serdtsev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/in19farkt/typed-react-admin/issues"
+  },
+  "homepage": "https://github.com/in19farkt/typed-react-admin#readme",
+  "devDependencies": {
+    "dtslint": "^0.2.0"
+  }
+}
