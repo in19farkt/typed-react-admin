@@ -2,7 +2,7 @@ export * from './dataFetchActions';
 export * from './actions';
 export * from './auth';
 // export * from './i18n';
-// export * from './mui';
+export * from './mui';
 // export createAppReducer, { getResources, getLocale } from './reducer';
 // export adminReducer from './reducer/admin';
 // export i18nReducer from './reducer/i18n';
