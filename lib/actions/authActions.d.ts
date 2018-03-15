@@ -8,7 +8,7 @@ export const USER_LOGIN_FAILURE: string;
 export const USER_LOGIN_SUCCESS: string;
 export const USER_LOGOUT: string;
 
-export function userLogin(payload: any, pathName: string): Action;
+export function userLogin(payload?: any, redirectTo?: string): Action;
 // TODO: routeParams
-export function userCheck(payload: Record<string, any>, pathName: string, routeParams: any): Action;
+export function userCheck(payload?: Record<string, any>, pathName?: string, routeParams?: any): Action;
 export function userLogout(redirectTo?: string): Action;
