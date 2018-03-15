@@ -11,7 +11,7 @@ export interface Props {
     children: Array<React.ReactElement<any>>; // TODO Children props type
     catchAll?: React.ReactType;
     customSagas?: Array<() => SagaIterator>;
-    customReducers?: Array<Reducer<any>>;
+    customReducers?: Partial<Record<string, Reducer<any>>>;
     customRoutes?: Array<React.ReactElement<any>>;
     dashboard?: React.ReactType;
     history?: History;

@@ -1,7 +1,7 @@
+// TypeScript Version: 2.3
 import * as React from 'react';
 import { Omit } from 'react-router';
 
-// TypeScript Version: 2.3
 
 export * from './lib';
 
