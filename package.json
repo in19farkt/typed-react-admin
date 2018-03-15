@@ -25,8 +25,16 @@
     "dtslint": "^0.2.0"
   },
   "dependencies": {
+    "@types/history": "^4.6.2",
     "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-router": "^4.0.22",
+    "history": "^4.7.2",
     "material-ui": "^1.0.0-beta.32",
-    "redux": "^3.7.2"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6"
   }
 }
