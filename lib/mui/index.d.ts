@@ -64,19 +64,22 @@ export class Show extends React.Component<{
 
 export abstract class Form extends React.Component<{
   defaultValue?: {},
-  validation?: (record: {}) => {}
+  validate?: (allValues: any, props: any) => { [key: string]: string };
 }> { }
 export class SimpleForm extends Form { }
 export class TabbedForm extends Form { }
 
+type Validator = (value: any, allValues: any, props: any) => string | undefined;
+
 export interface InputProps {
   source: string;
   defaultValue?: any;
-  validation?: (record: {}) => {};
+  validate?: Validator | Validator[];
   label?: string;
   style?: {};
   elStyle?: {};
   alwaysOn?: boolean;
+  addField?: boolean;
   onFocus?(): void;
   onBlur?(): void;
   onChange?(event: Event): void;
@@ -87,7 +90,7 @@ export interface SelectProps extends InputProps {
   optionText?: string | ((value: any) => string),
   optionValue?: string,
   filter?: ((searchText: string, key: string, item?: any) => boolean),
-  options?: any
+  options?: any // TODO: __MaterialUI.SelectFieldProps
 }
 
 export interface AutocompleteInputProps extends InputProps {
@@ -95,9 +98,9 @@ export interface AutocompleteInputProps extends InputProps {
   optionText?: string | ((value: any) => string),
   optionValue?: string,
   filter?: ((searchText: string, key: string, item?: any) => boolean),
-  options?: any
+  options?: any // TODO: __MaterialUI.AutoCompleteProps<any>
 }
-export class TextInput extends React.Component<InputProps> { }
+export class TextInput extends React.Component<InputProps & Pick<React.HTMLProps<HTMLInputElement>, 'type'>> { }
 export class AutocompleteInput extends React.Component<AutocompleteInputProps> { }
 export class BooleanInput extends React.Component<InputProps> { }
 export class NullableInput extends React.Component<InputProps> { }
