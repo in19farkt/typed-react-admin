@@ -35,6 +35,18 @@ export interface IDatagridProps {
   rowOptions?: React.CSSProperties;
 }
 
+export interface IFromListDataProps<T> {
+  currentSort?: {
+    field: string;
+    order: string;
+  };
+  data?: { [key: number]: T };
+  ids?: number[];
+  isLoading?: boolean;
+  resource?: string;
+  setSort?(): void;
+}
+
 export interface IOwnFieldProps {
   source: string;
   label?: string;
@@ -73,6 +85,7 @@ export class ReferenceArrayField extends React.Component<IFieldProps & {
 export class ReferenceManyField extends React.Component<Omit<IFieldProps, 'source'> & {
   reference: string;
   target: string;
+  perPage?: number;
 }> { }
 
 export function translate<Props extends ITranslateProps>(
