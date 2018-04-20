@@ -1,6 +1,6 @@
 export * from './accumulateActions';
 export * from './authActions';
-// export * from './dataActions';
+export * from './dataActions';
 // export * from './fetchActions';
 // export * from './filterActions';
 // export * from './formActions';
