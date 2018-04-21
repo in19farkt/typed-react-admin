@@ -7,7 +7,9 @@ export * from './lib';
 
 export class Datagrid extends React.Component<IDatagridProps> { }
 export class SimpleShowLayout extends React.Component<IAorFieldProps> { }
-export class SingleFieldList extends React.Component<IAorFieldProps> { }
+export class SingleFieldList extends React.Component<IAorFieldProps & {
+  linkType?: boolean;
+}> { }
 export class TabbedShowLayout extends React.Component<IAorFieldProps> { }
 export class Tab extends React.Component<IAorFieldProps & {
   icon?: React.ReactChild;
