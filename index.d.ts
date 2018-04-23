@@ -11,7 +11,7 @@ export class SingleFieldList extends React.Component<IAorFieldProps & {
   linkType?: boolean;
 }> { }
 export class TabbedShowLayout extends React.Component<IAorFieldProps & {
-  innerRef(ref: any): void,
+  innerRef?(ref: any): void;
 }> { }
 export class Tab extends React.Component<IAorFieldProps & {
   icon?: React.ReactChild;
