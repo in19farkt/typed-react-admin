@@ -10,7 +10,9 @@ export class SimpleShowLayout extends React.Component<IAorFieldProps> { }
 export class SingleFieldList extends React.Component<IAorFieldProps & {
   linkType?: boolean;
 }> { }
-export class TabbedShowLayout extends React.Component<IAorFieldProps> { }
+export class TabbedShowLayout extends React.Component<IAorFieldProps & {
+  innerRef(ref: any): void,
+}> { }
 export class Tab extends React.Component<IAorFieldProps & {
   icon?: React.ReactChild;
   label?: string | JSX.Element;
