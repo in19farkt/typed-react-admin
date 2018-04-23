@@ -1,6 +1,6 @@
 
 import { Action } from "redux";
-import { DataProvider, mixed } from "index";
+import { DataProvider, mixed } from "../types";
 
 interface CommonParams {
   pagination: {
