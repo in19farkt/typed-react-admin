@@ -109,7 +109,7 @@ export class List extends React.Component<{
 
 export class Show extends React.Component<{
   title?: string | JSX.Element,
-  actions?: React.Component<void>,
+  actions?: JSX.Element,
 }> { }
 
 export class RefreshButton extends React.Component { }
