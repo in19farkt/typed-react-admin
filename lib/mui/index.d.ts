@@ -60,6 +60,7 @@ export class Edit extends React.Component<{
 
 export class Show extends React.Component<{
   title?: string | JSX.Element
+  actions?: JSX.Element;
 }> { }
 
 export abstract class Form extends React.Component<{

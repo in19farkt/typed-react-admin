@@ -103,6 +103,7 @@ export class List extends React.Component<{
   defaultSort?: { field: string, order: 'ASC' | 'DESC' },
   actions?: React.Component<void>,
   filters?: JSX.Element,
+  bulkActions?: boolean;
   pagination?: JSX.Element
 }> { }
 
@@ -110,6 +111,8 @@ export class Show extends React.Component<{
   title?: string | JSX.Element,
   actions?: React.Component<void>,
 }> { }
+
+export class RefreshButton extends React.Component { }
 
 export interface ICustomListProps<T = any> {
   data?: T[];
