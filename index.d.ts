@@ -138,6 +138,17 @@ export interface IMenuProps {
 
 export class Menu extends React.Component<IMenuProps> { }
 
+export class Sidebar extends React.Component { }
+export class Notification extends React.Component { }
+
+export interface AppBar {
+  title: string | JSX.Element;
+  classes?: object;
+  open?: boolean;
+}
+
+export class AppBar extends React.Component { }
+
 export class Authenticated extends React.Component<{
   authParams?: object;
   location: object;
