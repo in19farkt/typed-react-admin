@@ -143,7 +143,7 @@ export class Notification extends React.Component { }
 
 export interface AppBarProps {
   title: string | JSX.Element;
-  classes?: object;
+  classes?: Record<string, string>;
   open?: boolean;
 }
 
