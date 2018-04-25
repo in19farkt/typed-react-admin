@@ -9,6 +9,7 @@ export class Datagrid extends React.Component<IDatagridProps> { }
 export class SimpleShowLayout extends React.Component<IAorFieldProps> { }
 export class SingleFieldList extends React.Component<IAorFieldProps & {
   linkType?: boolean;
+  style?: React.CSSProperties;
 }> { }
 export class TabbedShowLayout extends React.Component<IAorFieldProps & {
   innerRef?(ref: any): void;

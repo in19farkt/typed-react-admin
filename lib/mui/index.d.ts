@@ -22,8 +22,10 @@ export class CreateButton extends React.Component<{
 }> { }
 
 export class DeleteButton extends React.Component<{
+  resource: string;
   basePath?: string,
   record?: {}
+  undoable?: boolean;
 }> { }
 
 export class EditButton extends React.Component<{
