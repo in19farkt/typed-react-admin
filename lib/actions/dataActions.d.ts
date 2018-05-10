@@ -62,6 +62,7 @@ export function crudCreate(
   resource: string,
   data: any,
   basePath: string,
+  redirect?: string,
 ): Action;
 
 export const CRUD_UPDATE_MANY = 'RA/CRUD_UPDATE_MANY';
