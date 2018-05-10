@@ -69,9 +69,12 @@ export abstract class Form extends React.Component<{
   defaultValue?: {},
   validate?: (allValues: any, props: any) => { [key: string]: string };
 }> { }
-export class SimpleForm extends Form {
-  record: object;
-}
+export class SimpleForm extends React.Component<{
+  defaultValue?: {},
+  validate?: (allValues: any, props: any) => { [key: string]: string };
+  record?: object;
+  save?(record: object, redirect: string): void;
+}> { }
 export class TabbedForm extends Form { }
 
 type Validator = (value: any, allValues: any, props: any) => string | undefined;
