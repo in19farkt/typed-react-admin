@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as MUI from 'material-ui';
+import * as MUI from '@material-ui/core';
 
 export type mixed = number | string;
 
