@@ -7,8 +7,13 @@ export * from './lib';
 
 export class Datagrid extends React.Component<IDatagridProps> { }
 export class SimpleShowLayout extends React.Component<IAorFieldProps> { }
-export class SingleFieldList extends React.Component<IAorFieldProps> { }
-export class TabbedShowLayout extends React.Component<IAorFieldProps> { }
+export class SingleFieldList extends React.Component<IAorFieldProps & {
+  linkType?: boolean;
+  style?: React.CSSProperties;
+}> { }
+export class TabbedShowLayout extends React.Component<IAorFieldProps & {
+  innerRef?(ref: any): void;
+}> { }
 export class Tab extends React.Component<IAorFieldProps & {
   icon?: React.ReactChild;
   label?: string | JSX.Element;
@@ -112,13 +117,16 @@ export class List extends React.Component<{
   defaultSort?: { field: string, order: 'ASC' | 'DESC' },
   actions?: React.Component<void>,
   filters?: JSX.Element,
+  bulkActions?: boolean;
   pagination?: JSX.Element
 }> { }
 
 export class Show extends React.Component<{
   title?: string | JSX.Element,
-  actions?: React.Component<void>,
+  actions?: JSX.Element,
 }> { }
+
+export class RefreshButton extends React.Component { }
 
 export interface ICustomListProps<T = any> {
   data?: T[];
@@ -133,6 +141,17 @@ export interface IMenuProps {
 }
 
 export class Menu extends React.Component<IMenuProps> { }
+
+export class Sidebar extends React.Component { }
+export class Notification extends React.Component { }
+
+export interface AppBarProps {
+  title: string | JSX.Element;
+  classes?: Record<string, string>;
+  open?: boolean;
+}
+
+export class AppBar extends React.Component<AppBarProps> { }
 
 export class Authenticated extends React.Component<{
   authParams?: object;

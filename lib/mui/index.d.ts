@@ -22,8 +22,10 @@ export class CreateButton extends React.Component<{
 }> { }
 
 export class DeleteButton extends React.Component<{
+  resource: string;
   basePath?: string,
   record?: {}
+  undoable?: boolean;
 }> { }
 
 export class EditButton extends React.Component<{
@@ -60,13 +62,19 @@ export class Edit extends React.Component<{
 
 export class Show extends React.Component<{
   title?: string | JSX.Element
+  actions?: JSX.Element;
 }> { }
 
 export abstract class Form extends React.Component<{
   defaultValue?: {},
   validate?: (allValues: any, props: any) => { [key: string]: string };
 }> { }
-export class SimpleForm extends Form { }
+export class SimpleForm extends React.Component<{
+  defaultValue?: {},
+  validate?: (allValues: any, props: any) => { [key: string]: string };
+  record?: object;
+  save?(record: object, redirect: string): void;
+}> { }
 export class TabbedForm extends Form { }
 
 type Validator = (value: any, allValues: any, props: any) => string | undefined;
