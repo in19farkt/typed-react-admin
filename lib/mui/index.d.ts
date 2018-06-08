@@ -13,6 +13,12 @@ import { Omit } from "react-router";
 // export Link from './Link';
 // export defaultTheme from './defaultTheme';
 
+export class Pagination extends React.Component<{
+  setPage(page: number | string): void;
+  page: number;
+  total: number;
+  perPage: number;
+}> { }
 export class ViewTitle extends React.Component<{
   title: string;
 }> { }
