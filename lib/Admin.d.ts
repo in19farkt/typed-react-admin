@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Reducer } from 'redux';
 import { History } from 'history';
 import { SagaIterator } from 'redux-saga';
-import { Theme } from 'material-ui/styles';
+import { Theme } from '@material-ui/core/styles';
 import { AuthProvider, DataProvider, I18nProvider } from './types';
 
 export interface Props {

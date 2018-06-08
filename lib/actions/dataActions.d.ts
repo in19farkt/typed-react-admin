@@ -1,4 +1,3 @@
-
 import { Action } from "redux";
 import { DataProvider, mixed } from "../types";
 
@@ -40,7 +39,6 @@ export function crudGetList(
   sort: DataProvider.GetListParams['sort'],
   filter: DataProvider.GetListParams['filter'],
 ): Action;
-
 
 export const CRUD_GET_ONE = 'RA/CRUD_GET_ONE';
 export const CRUD_GET_ONE_LOADING = 'RA/CRUD_GET_ONE_LOADING';
@@ -141,4 +139,3 @@ export function crudGetManyReference(
   filter: CommonParams['filter'],
   source: string,
 ): Action;
-
