@@ -14,7 +14,7 @@ export interface ResourceProps {
   options?: { label: string };
 }
 
-export interface Pagination {
+export interface PaginationData {
   page: number;
   perPage: number;
 }
