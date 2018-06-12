@@ -115,6 +115,7 @@ export class List extends React.Component<{
   title?: string | JSX.Element,
   perPage?: number,
   defaultSort?: { field: string, order: 'ASC' | 'DESC' },
+  sort?: { field: string, order: 'ASC' | 'DESC' },
   actions?: React.Component<void>,
   filters?: JSX.Element,
   bulkActions?: boolean;
