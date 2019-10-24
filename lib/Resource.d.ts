@@ -1,24 +1,26 @@
-import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
+declare module 'react-admin/lib/Resource' {
+  import * as React from 'react';
+  import { RouteComponentProps } from 'react-router';
+  import { Permissions } from '_types';
 
-export interface Props {
+  export interface Props {
     context?: 'route' | 'registration';
     name: string;
-    list?: React.ComponentType<ResourceViewProps>;
-    create?: React.ComponentType<ResourceViewProps>;
-    edit?: React.ComponentType<ResourceViewProps>;
-    show?: React.ComponentType<ResourceViewProps>;
-    remove?: React.ComponentType<ResourceViewProps>;
+    list?: React.ComponentType<ResourceViewProps> | null | false;
+    create?: React.ComponentType<ResourceViewProps> | null | false;
+    edit?: React.ComponentType<ResourceViewProps> | null | false;
+    show?: React.ComponentType<ResourceViewProps> | null | false;
+    remove?: React.ComponentType<ResourceViewProps> | null | false;
     icon?: React.ComponentType;
     options?: ResourceOptions;
-}
+  }
 
-export interface ResourceOptions {
+  export interface ResourceOptions {
     label?: string;
-}
+  }
 
-// TODO route params
-export interface ResourceViewProps extends RouteComponentProps<any> {
+  // TODO route params
+  export interface ResourceViewProps extends RouteComponentProps<any> {
     hasCreate: boolean;
     hasDelete: boolean;
     hasEdit: boolean;
@@ -26,7 +28,9 @@ export interface ResourceViewProps extends RouteComponentProps<any> {
     hasShow: boolean;
     resource: string;
     options?: ResourceOptions;
-    permissions?: any;
-}
+    permissions: Permissions | null;
+  }
 
-export default class extends React.Component<Props> { }
+  export default class extends React.Component<Props> { }
+
+}

@@ -1,3 +1,5 @@
-export * from './types';
-// export Authenticated from './Authenticated';
-// export WithPermissions from './WithPermissions';
+declare module 'react-admin/lib/auth' {
+  export * from 'react-admin/lib/auth/types';
+  export { default as WithPermissions, WithPermissionsProps } from 'react-admin/lib/auth/WithPermissions';
+  // export Authenticated from './Authenticated';
+}

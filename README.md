@@ -1,3 +1,1 @@
-# typed-react-admin
-## Install typings in your project 
-npm install --save-dev in19farkt/typed-react-admin#dist
+# Last draft version of type definitions for react-admin@2.4.0
